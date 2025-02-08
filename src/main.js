@@ -135,8 +135,6 @@ function init() {
         // Day/Night Cycle Logic (Opacity-Based)
         const dotProduct = sun.position.clone().normalize().dot(new THREE.Vector3(0, 0, 1));
 
-        // Map the dot product to an opacity value between 0 and 1.
-        // Use a smoothstep function for a smoother transition.
         let opacity = THREE.MathUtils.smoothstep(dotProduct, -0.4, 0.1);  // Adjust these values
 
         // Set the opacity of the lights material.
